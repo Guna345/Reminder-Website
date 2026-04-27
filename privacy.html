@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awekly — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0A0A0A;
+      --card: #1A1714;
+      --amber: #F5A623;
+      --peach: #E8835A;
+      --grad-start: #C4956A;
+      --grad-end: #E8622A;
+      --text: #FFFFFF;
+      --text-dim: rgba(255, 255, 255, 0.45);
+      --scarlet: #D94F30;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(245,166,35,0.12);
+      padding: 0 32px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 5px;
+      background: linear-gradient(90deg, var(--grad-start), var(--amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 8px; }
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 20px;
+      transition: all 0.2s;
+      letter-spacing: 0.3px;
+    }
+    .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+    .nav-links a.active { color: var(--amber); background: rgba(245,166,35,0.1); }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #0f0c0a 0%, #1a1208 100%);
+      border-bottom: 1px solid rgba(245, 166, 35, 0.15);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .brand-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+      display: flex; align-items: center; justify-content: center; font-size: 24px;
+    }
+    header h1 { font-size: 20px; font-weight: 300; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 8px; }
+    .updated { font-size: 13px; color: var(--text-dim); }
+    .updated span { color: var(--amber); }
+
+    /* ── Layout ── */
+    main { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* ── Summary banner ── */
+    .summary-banner {
+      background: linear-gradient(135deg, rgba(196,149,106,0.12), rgba(232,98,42,0.08));
+      border: 1px solid rgba(245,166,35,0.25);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .summary-banner .icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+    .summary-banner p { color: rgba(255,255,255,0.85); font-size: 15px; }
+    .summary-banner strong { color: var(--amber); }
+
+    /* ── Sections ── */
+    section {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--amber);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.3px;
+    }
+    section h2 .num {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: rgba(245,166,35,0.15);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800; color: var(--amber); flex-shrink: 0;
+    }
+    section p { color: rgba(255,255,255,0.78); font-size: 15px; margin-bottom: 12px; }
+    section p:last-child { margin-bottom: 0; }
+    section ul { list-style: none; padding: 0; margin: 0; }
+    section ul li {
+      color: rgba(255,255,255,0.78);
+      font-size: 15px;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    section ul li:last-child { border-bottom: none; }
+    section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%; transform: translateY(-50%);
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--peach);
+    }
+
+    /* ── Permission table ── */
+    .perm-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+    .perm-table th {
+      text-align: left; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.8px;
+      color: var(--text-dim); padding: 8px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .perm-table td {
+      padding: 10px 12px; font-size: 14px; color: rgba(255,255,255,0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top;
+    }
+    .perm-table tr:last-child td { border-bottom: none; }
+    .perm-table td:first-child {
+      font-family: 'Courier New', monospace; font-size: 12px;
+      color: var(--amber); white-space: nowrap; padding-right: 20px;
+    }
+
+    /* ── No-data grid ── */
+    .no-data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+    @media (max-width: 500px) { .no-data-grid { grid-template-columns: 1fr; } }
+    .no-data-item {
+      background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.15);
+      border-radius: 10px; padding: 14px 16px; font-size: 14px;
+      color: rgba(255,255,255,0.75); display: flex; align-items: center; gap: 10px;
+    }
+    .no-data-item .check { color: #4CAF50; font-size: 18px; flex-shrink: 0; }
+
+    /* ── Contact ── */
+    .contact-link { color: var(--amber); text-decoration: none; font-weight: 600; }
+    .contact-link:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 32px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      color: var(--text-dim); font-size: 13px;
+    }
+    footer .footer-brand {
+      font-size: 15px; font-weight: 700; letter-spacing: 4px;
+      background: linear-gradient(90deg, var(--grad-start), var(--amber));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; display: block; margin-bottom: 8px;
+    }
+    footer a { color: var(--amber); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      section { padding: 22px 20px; }
+      header { padding: 36px 20px 32px; }
+      nav { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a class="nav-brand" href="index.html">A W E K L Y</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" class="active">Privacy</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="brand">
+      <div class="brand-icon">⏰</div>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: <span>April 25, 2026</span></p>
+  </header>
+
+  <main>
+
+    <div class="summary-banner">
+      <div class="icon">🔒</div>
+      <p>
+        <strong>Short version:</strong> Awekly collects absolutely no personal data. Everything you enter stays on your device. There are no servers, no accounts, no analytics, and no third-party tracking of any kind.
+      </p>
+    </div>
+
+    <section>
+      <h2><span class="num">1</span> Overview</h2>
+      <p>Awekly ("the App", "we", "us") is a personal alarm application for Android that replaces generic alarm tones with a Text-to-Speech (TTS) voice message you write yourself.</p>
+      <p>This Privacy Policy explains how the App handles information. Because Awekly is designed to work entirely offline with no cloud services, there is very little to disclose — but we want to be fully transparent about everything the App does and does not do.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span> Information We Collect</h2>
+      <p><strong>We collect no information whatsoever.</strong></p>
+      <p>Awekly does not collect, store, transmit, or share any personal data, usage data, diagnostic data, or any other information about you or your device.</p>
+      <div class="no-data-grid">
+        <div class="no-data-item"><span class="check">✓</span> No account or sign-up required</div>
+        <div class="no-data-item"><span class="check">✓</span> No analytics or crash reporting</div>
+        <div class="no-data-item"><span class="check">✓</span> No advertising SDKs</div>
+        <div class="no-data-item"><span class="check">✓</span> No network requests of any kind</div>
+        <div class="no-data-item"><span class="check">✓</span> No third-party tracking</div>
+        <div class="no-data-item"><span class="check">✓</span> No cloud sync or backup</div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span> Data Stored on Your Device</h2>
+      <p>The App stores alarm data locally on your device only, using Android's standard storage mechanisms:</p>
+      <ul>
+        <li><strong>Alarm settings</strong> — time, repeat type, wake-up message text, voice gender, and loop preference.</li>
+        <li><strong>App preferences</strong> — selected date, UI state.</li>
+        <li><strong>Boot-recovery data</strong> — a copy of your alarm list stored in SharedPreferences so the App can reschedule alarms after a device restart.</li>
+      </ul>
+      <p style="margin-top:14px;">This data never leaves your device. Uninstalling the App permanently and irreversibly deletes all of it.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">4</span> Text-to-Speech (TTS)</h2>
+      <p>When an alarm fires, the App uses your device's built-in Android TTS engine (such as Google Text-to-Speech or your manufacturer's default engine) to read your wake-up message aloud.</p>
+      <ul>
+        <li>The message text is passed to the local TTS engine on-device only.</li>
+        <li>No text is ever sent to Awekly's servers (there are none) or to any external service.</li>
+        <li>Whether Google TTS or another TTS engine transmits data as part of its own operation is governed by that engine's own privacy policy, not Awekly's. Awekly has no control over third-party TTS engines installed on your device.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">5</span> Android Permissions</h2>
+      <p>The App requests only the permissions necessary to schedule and deliver alarms:</p>
+      <table class="perm-table">
+        <thead>
+          <tr><th>Permission</th><th>Why it's needed</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>POST_NOTIFICATIONS</td><td>Show the alarm notification on Android 13 and above.</td></tr>
+          <tr><td>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM</td><td>Fire alarms at the precise time you set.</td></tr>
+          <tr><td>USE_FULL_SCREEN_INTENT</td><td>Display the alarm screen over your lock screen when the alarm fires.</td></tr>
+          <tr><td>WAKE_LOCK</td><td>Keep the screen on while the alarm is ringing so you can dismiss it.</td></tr>
+          <tr><td>RECEIVE_BOOT_COMPLETED</td><td>Automatically reschedule alarms after the device restarts.</td></tr>
+          <tr><td>FOREGROUND_SERVICE</td><td>Run the alarm service reliably in the background.</td></tr>
+          <tr><td>VIBRATE</td><td>Reserved for future use; not currently active.</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:16px;">None of these permissions are used to access personal data such as contacts, location, microphone, camera, or files.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">6</span> Third-Party Libraries</h2>
+      <p>Awekly uses a small set of open-source libraries solely to render UI and deliver alarms. None of these libraries send any data off your device:</p>
+      <ul>
+        <li><strong>react-native-tts</strong> — interfaces with the device's local TTS engine.</li>
+        <li><strong>react-native-linear-gradient</strong> — renders UI gradients.</li>
+        <li><strong>react-native-svg</strong> — renders vector graphics.</li>
+        <li><strong>@notifee/react-native</strong> — manages notification channel permissions only; does not track usage.</li>
+        <li><strong>@react-native-async-storage/async-storage</strong> — reads and writes local app data.</li>
+      </ul>
+      <p style="margin-top:12px;">There are no advertising, analytics, or crash-reporting SDKs included in the App.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">7</span> Children's Privacy</h2>
+      <p>Awekly does not collect any information from anyone, including children. The App is safe for users of all ages and fully complies with the Children's Online Privacy Protection Act (COPPA) and similar regulations worldwide.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">8</span> Data Security</h2>
+      <p>Because no data is transmitted off your device, there is no data in transit to protect and no server to secure. Your alarm data is protected by your device's own security mechanisms (lock screen, encryption, Android's app sandbox).</p>
+    </section>
+
+    <section>
+      <h2><span class="num">9</span> Changes to This Policy</h2>
+      <p>If we ever update this Privacy Policy, we will post the new version at this URL and update the "Last updated" date at the top. We encourage you to review this page periodically.</p>
+      <p>Because we collect no data, any future changes are unlikely to affect your privacy in a material way.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">10</span> Contact Us</h2>
+      <p>If you have any questions or concerns about this Privacy Policy or the App's data practices, please contact us at:</p>
+      <p><a class="contact-link" href="mailto:ssvignesh.619@gmail.com">ssvignesh.619@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="footer-brand">A W E K L Y</span>
+    &copy; 2026 Awekly. All rights reserved.<br />
+    <a href="index.html">← Back to Home</a> &nbsp;·&nbsp;
+    This privacy policy applies to the Awekly Android application.
+  </footer>
+
+</body>
+</html>

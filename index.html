@@ -3,460 +3,540 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Awekly — Privacy Policy</title>
+  <title>Awekly — Wake Up with Purpose</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #0A0A0A;
       --card: #1A1714;
+      --card2: #141210;
       --amber: #F5A623;
       --peach: #E8835A;
       --grad-start: #C4956A;
       --grad-end: #E8622A;
       --text: #FFFFFF;
-      --text-dim: rgba(255, 255, 255, 0.45);
+      --text-dim: rgba(255,255,255,0.45);
+      --sky: #4A90D9;
       --scarlet: #D94F30;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-      line-height: 1.7;
-      font-size: 16px;
+      font-family: 'Outfit', -apple-system, sans-serif;
+      line-height: 1.6;
     }
 
-    /* ── Header ── */
-    header {
-      background: linear-gradient(135deg, #0f0c0a 0%, #1a1208 100%);
-      border-bottom: 1px solid rgba(245, 166, 35, 0.15);
-      padding: 48px 24px 40px;
-      text-align: center;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .brand-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(245,166,35,0.12);
+      padding: 0 32px;
+      height: 60px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 24px;
+      justify-content: space-between;
     }
-
-    .brand-name {
-      font-size: 28px;
+    .nav-brand {
+      font-size: 18px;
       font-weight: 800;
-      letter-spacing: 6px;
+      letter-spacing: 5px;
       background: linear-gradient(90deg, var(--grad-start), var(--amber));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      text-decoration: none;
     }
-
-    header h1 {
-      font-size: 20px;
-      font-weight: 300;
+    .nav-links { display:flex; gap:8px; }
+    .nav-links a {
       color: var(--text-dim);
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    .updated {
-      font-size: 13px;
-      color: var(--text-dim);
-    }
-
-    .updated span {
-      color: var(--amber);
-    }
-
-    /* ── Layout ── */
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 48px 24px 80px;
-    }
-
-    /* ── Summary badge ── */
-    .summary-banner {
-      background: linear-gradient(135deg, rgba(196, 149, 106, 0.12), rgba(232, 98, 42, 0.08));
-      border: 1px solid rgba(245, 166, 35, 0.25);
-      border-radius: 16px;
-      padding: 24px 28px;
-      margin-bottom: 40px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .summary-banner .icon {
-      font-size: 28px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .summary-banner p {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 15px;
-    }
-
-    .summary-banner strong {
-      color: var(--amber);
-    }
-
-    /* ── Sections ── */
-    section {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 28px 32px;
-      margin-bottom: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    section h2 {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--amber);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 20px;
+      transition: all 0.2s;
       letter-spacing: 0.3px;
     }
+    .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.06); }
+    .nav-links a.active { color: var(--amber); background: rgba(245,166,35,0.1); }
 
-    section h2 .num {
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
-      background: rgba(245, 166, 35, 0.15);
-      display: inline-flex;
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
-      font-weight: 800;
-      color: var(--amber);
-      flex-shrink: 0;
-    }
-
-    section p {
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 15px;
-      margin-bottom: 12px;
-    }
-
-    section p:last-child {
-      margin-bottom: 0;
-    }
-
-    section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    section ul li {
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 15px;
-      padding: 6px 0 6px 20px;
+      text-align: center;
+      padding: 80px 24px 100px;
       position: relative;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(196,149,106,0.14) 0%, transparent 70%),
+                  radial-gradient(ellipse 50% 40% at 80% 80%, rgba(232,98,42,0.07) 0%, transparent 60%),
+                  var(--bg);
     }
-
-    section ul li:last-child {
-      border-bottom: none;
-    }
-
-    section ul li::before {
+    .hero::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--peach);
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
     }
-
-    /* ── Permission table ── */
-    .perm-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 4px;
-    }
-
-    .perm-table th {
-      text-align: left;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--text-dim);
-      padding: 8px 12px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .perm-table td {
-      padding: 10px 12px;
-      font-size: 14px;
-      color: rgba(255,255,255,0.78);
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      vertical-align: top;
-    }
-
-    .perm-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .perm-table td:first-child {
-      font-family: 'Courier New', monospace;
-      font-size: 12px;
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,166,35,0.1);
+      border: 1px solid rgba(245,166,35,0.25);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 600;
       color: var(--amber);
-      white-space: nowrap;
-      padding-right: 20px;
+      letter-spacing: 0.5px;
+      margin-bottom: 28px;
     }
-
-    /* ── No-data highlight ── */
-    .no-data-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 8px;
-    }
-
-    @media (max-width: 500px) {
-      .no-data-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .no-data-item {
-      background: rgba(245, 166, 35, 0.06);
-      border: 1px solid rgba(245, 166, 35, 0.15);
-      border-radius: 10px;
-      padding: 14px 16px;
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.75);
+    .hero-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      font-size: 44px;
+      margin: 0 auto 28px;
+      box-shadow: 0 24px 60px rgba(232,98,42,0.3);
     }
-
-    .no-data-item .check {
-      color: #4CAF50;
-      font-size: 18px;
-      flex-shrink: 0;
+    .hero h1 {
+      font-size: clamp(52px, 8vw, 88px);
+      font-weight: 900;
+      letter-spacing: 10px;
+      background: linear-gradient(135deg, #fff 0%, var(--amber) 60%, var(--peach) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      line-height: 1.05;
     }
-
-    /* ── Contact ── */
-    .contact-link {
+    .hero-tagline {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      letter-spacing: 0.3px;
+    }
+    .hero-tagline strong {
       color: var(--amber);
-      text-decoration: none;
       font-weight: 600;
     }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      box-shadow: 0 12px 40px rgba(232,98,42,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 48px rgba(232,98,42,0.45); }
+    .hero-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
 
-    .contact-link:hover {
-      text-decoration: underline;
+    /* ── Section wrapper ── */
+    .section {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 16px;
+      max-width: 520px;
+      margin: 0 auto 56px;
+      font-weight: 300;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ── Feature grid ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .feat-card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feat-card:hover {
+      border-color: rgba(245,166,35,0.2);
+      transform: translateY(-3px);
+    }
+    .feat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+    .feat-icon.amber { background: rgba(245,166,35,0.12); }
+    .feat-icon.peach { background: rgba(232,131,90,0.12); }
+    .feat-icon.sky   { background: rgba(74,144,217,0.12); }
+    .feat-icon.green { background: rgba(76,175,80,0.12); }
+    .feat-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .feat-card p {
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.65;
+    }
+
+    /* ── How it works ── */
+    .how-wrap {
+      background: var(--card2);
+      border-top: 1px solid rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+    }
+    .step {
+      padding: 36px 28px;
+      border-right: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+    }
+    .step:last-child { border-right: none; }
+    .step-num {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--amber);
+      opacity: 0.6;
+      margin-bottom: 12px;
+    }
+    .step-icon { font-size: 32px; margin-bottom: 14px; }
+    .step h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .step p  { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+
+    /* ── Privacy highlight ── */
+    .privacy-strip {
+      background: linear-gradient(135deg, rgba(196,149,106,0.08), rgba(232,98,42,0.05));
+      border: 1px solid rgba(245,166,35,0.15);
+      border-radius: 24px;
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .privacy-strip .ps-icon { font-size: 52px; flex-shrink: 0; }
+    .privacy-strip .ps-body { flex: 1; min-width: 200px; }
+    .privacy-strip h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .privacy-strip p  { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.65; }
+    .privacy-strip .ps-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      color: var(--amber);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .privacy-strip .ps-link:hover { text-decoration: underline; }
+    .ps-pills {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .ps-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.04);
+      padding: 7px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .ps-pill span { color: #4CAF50; }
+
+    /* ── Spec strip ── */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .spec-item {
+      background: var(--card);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .spec-item .spec-val {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--amber);
+      margin-bottom: 6px;
+    }
+    .spec-item .spec-lbl {
+      font-size: 13px;
+      color: var(--text-dim);
+      font-weight: 400;
     }
 
     /* ── Footer ── */
     footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 24px;
       text-align: center;
-      padding: 32px 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--text-dim);
-      font-size: 13px;
     }
-
-    footer .footer-brand {
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 4px;
+    .footer-brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 5px;
       background: linear-gradient(90deg, var(--grad-start), var(--amber));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
+    footer p { font-size: 13px; color: var(--text-dim); line-height: 1.8; }
+    footer a { color: var(--amber); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
-    @media (max-width: 600px) {
-      section {
-        padding: 22px 20px;
-      }
-
-      header {
-        padding: 36px 20px 32px;
-      }
-
-      .brand-name {
-        font-size: 22px;
-      }
+    @media (max-width: 640px) {
+      nav { padding: 0 16px; }
+      .privacy-strip { padding: 28px 24px; }
+      .step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .step:last-child { border-bottom: none; }
+      .ps-pills { flex-direction: row; flex-wrap: wrap; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="brand">
-      <div class="brand-icon">⏰</div>
-      <div class="brand-name">A W E K L Y</div>
+  <!-- Nav -->
+  <nav>
+    <a class="nav-brand" href="index.html">A W E K L Y</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="privacy.html">Privacy</a>
     </div>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: <span>April 25, 2026</span></p>
-  </header>
+  </nav>
 
-  <main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">⏰ Android Alarm App</div>
+    <div class="hero-icon">⏰</div>
+    <h1>AWEKLY</h1>
+    <p class="hero-tagline">
+      Replace jarring ringtones with a <strong>spoken message</strong> in your own words.
+      Wake up with intention, not interruption.
+    </p>
+    <a class="hero-cta" href="#features">Explore Features ↓</a>
+    <p class="hero-note">Free · Android · No account required</p>
+  </section>
 
-    <div class="summary-banner">
-      <div class="icon">🔒</div>
-      <p>
-        <strong>Short version:</strong> Awekly collects absolutely no personal data. Everything you enter stays on your device. There are no servers, no accounts, no analytics, and no third-party tracking of any kind.
-      </p>
-    </div>
+  <hr class="divider" />
 
-    <section>
-      <h2><span class="num">1</span> Overview</h2>
-      <p>Awekly ("the App", "we", "us") is a personal alarm application for Android that replaces generic alarm tones with a Text-to-Speech (TTS) voice message you write yourself.</p>
-      <p>This Privacy Policy explains how the App handles information. Because Awekly is designed to work entirely offline with no cloud services, there is very little to disclose — but we want to be fully transparent about everything the App does and does not do.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">2</span> Information We Collect</h2>
-      <p><strong>We collect no information whatsoever.</strong></p>
-      <p>Awekly does not collect, store, transmit, or share any personal data, usage data, diagnostic data, or any other information about you or your device.</p>
-      <div class="no-data-grid">
-        <div class="no-data-item"><span class="check">✓</span> No account or sign-up required</div>
-        <div class="no-data-item"><span class="check">✓</span> No analytics or crash reporting</div>
-        <div class="no-data-item"><span class="check">✓</span> No advertising SDKs</div>
-        <div class="no-data-item"><span class="check">✓</span> No network requests of any kind</div>
-        <div class="no-data-item"><span class="check">✓</span> No third-party tracking</div>
-        <div class="no-data-item"><span class="check">✓</span> No cloud sync or backup</div>
+  <!-- Stats -->
+  <div class="section" style="padding-bottom: 0; padding-top: 64px;">
+    <div class="spec-grid">
+      <div class="spec-item">
+        <div class="spec-val">TTS</div>
+        <div class="spec-lbl">Voice-powered alarms</div>
       </div>
-    </section>
+      <div class="spec-item">
+        <div class="spec-val">0</div>
+        <div class="spec-lbl">Data collected</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-val">3</div>
+        <div class="spec-lbl">Repeat types</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-val">2</div>
+        <div class="spec-lbl">Voice genders</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-val">API 24+</div>
+        <div class="spec-lbl">Android 7.0 and above</div>
+      </div>
+    </div>
+  </div>
 
-    <section>
-      <h2><span class="num">3</span> Data Stored on Your Device</h2>
-      <p>The App stores alarm data locally on your device only, using Android's standard storage mechanisms:</p>
-      <ul>
-        <li><strong>Alarm settings</strong> — time, repeat type, wake-up message text, voice gender, and loop preference.</li>
-        <li><strong>App preferences</strong> — selected date, UI state.</li>
-        <li><strong>Boot-recovery data</strong> — a copy of your alarm list stored in SharedPreferences so the App can reschedule alarms after a device restart.</li>
-      </ul>
-      <p style="margin-top:14px;">This data never leaves your device. Uninstalling the App permanently and irreversibly deletes all of it.</p>
-    </section>
+  <!-- Features -->
+  <div class="section" id="features">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Everything you need for a mindful wake-up</h2>
+    <p class="section-sub">Write your message. Pick a voice. Set your time. Awekly does the rest.</p>
 
-    <section>
-      <h2><span class="num">4</span> Text-to-Speech (TTS)</h2>
-      <p>When an alarm fires, the App uses your device's built-in Android TTS engine (such as Google Text-to-Speech or your manufacturer's default engine) to read your wake-up message aloud.</p>
-      <ul>
-        <li>The message text is passed to the local TTS engine on-device only.</li>
-        <li>No text is ever sent to Awekly's servers (there are none) or to any external service.</li>
-        <li>Whether Google TTS or another TTS engine transmits data as part of its own operation is governed by that engine's own privacy policy, not Awekly's. Awekly has no control over third-party TTS engines installed on your device.</li>
-      </ul>
-    </section>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon amber">🗣️</div>
+        <h3>Text-to-Speech Alarms</h3>
+        <p>Your alarm message is read aloud by your device's built-in TTS engine — slow, clear, and calm. No ringtones, no music, just your words.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon peach">✍️</div>
+        <h3>Custom Wake-Up Message</h3>
+        <p>Write anything — a morning affirmation, your first task for the day, or a motivational reminder. The message is completely yours.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon sky">🎙️</div>
+        <h3>Male &amp; Female Voice</h3>
+        <p>Choose the voice gender that feels right. Male voice uses a lower pitch (0.8), female a softer higher pitch (1.3). Both speak at a relaxed 0.5× rate.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon green">🔁</div>
+        <h3>Repeat Until Dismissed</h3>
+        <p>Loop mode re-speaks your message every 1.2 seconds until you dismiss — no drifting back to sleep with a half-heard alarm.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon amber">📅</div>
+        <h3>One-time, Daily &amp; Weekly</h3>
+        <p>One-time alarms deactivate after firing. Daily alarms repeat every day. Weekly alarms repeat on the same day each week.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon peach">😴</div>
+        <h3>5-Minute Snooze</h3>
+        <p>Not quite ready? Snooze schedules a new native alarm exactly 5 minutes out. Dismiss when you're truly awake.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon sky">🌅</div>
+        <h3>Dynamic Sky UI</h3>
+        <p>The home screen gradient shifts from deep night blue through sunrise orange to day sky blue to sunset amber — matching the real sky outside your window.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon green">🔄</div>
+        <h3>Boot-Proof Reliability</h3>
+        <p>Reboot your phone and alarms reschedule automatically. No re-setup required after a restart or battery drain.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon amber">🔒</div>
+        <h3>Over-Lock-Screen Delivery</h3>
+        <p>The alarm screen appears over your lock screen the moment it fires. Your PIN stays intact — no forced unlock, no delay.</p>
+      </div>
+    </div>
+  </div>
 
-    <section>
-      <h2><span class="num">5</span> Android Permissions</h2>
-      <p>The App requests only the permissions necessary to schedule and deliver alarms:</p>
-      <table class="perm-table">
-        <thead>
-          <tr>
-            <th>Permission</th>
-            <th>Why it's needed</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>POST_NOTIFICATIONS</td>
-            <td>Show the alarm notification on Android 13 and above.</td>
-          </tr>
-          <tr>
-            <td>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM</td>
-            <td>Fire alarms at the precise time you set.</td>
-          </tr>
-          <tr>
-            <td>USE_FULL_SCREEN_INTENT</td>
-            <td>Display the alarm screen over your lock screen when the alarm fires.</td>
-          </tr>
-          <tr>
-            <td>WAKE_LOCK</td>
-            <td>Keep the screen on while the alarm is ringing so you can dismiss it.</td>
-          </tr>
-          <tr>
-            <td>RECEIVE_BOOT_COMPLETED</td>
-            <td>Automatically reschedule alarms after the device restarts.</td>
-          </tr>
-          <tr>
-            <td>FOREGROUND_SERVICE</td>
-            <td>Run the alarm service reliably in the background.</td>
-          </tr>
-          <tr>
-            <td>VIBRATE</td>
-            <td>Reserved for future use; not currently active.</td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="margin-top:16px;">None of these permissions are used to access personal data such as contacts, location, microphone, camera, or files.</p>
-    </section>
+  <!-- How it works -->
+  <div class="how-wrap">
+    <div class="section" style="padding-bottom: 0;">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">Three steps to a better morning</h2>
+      <p class="section-sub" style="margin-bottom: 0;"></p>
+    </div>
+    <div class="section" style="padding-top: 0; max-width: 1080px; margin: 0 auto; padding-left: 0; padding-right: 0;">
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">STEP 01</div>
+          <div class="step-icon">✍️</div>
+          <h3>Write your message</h3>
+          <p>Type exactly what you want to hear the moment you wake up — an affirmation, a task, or a simple reminder.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">STEP 02</div>
+          <div class="step-icon">⏰</div>
+          <h3>Set the time &amp; repeat</h3>
+          <p>Use the circular dial to pick your wake-up time. Choose one-time, daily, or weekly. Select your preferred voice.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">STEP 03</div>
+          <div class="step-icon">🔔</div>
+          <h3>Wake up intentionally</h3>
+          <p>When the alarm fires, your device reads your message aloud — right over the lock screen, as many times as needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <section>
-      <h2><span class="num">6</span> Third-Party Libraries</h2>
-      <p>Awekly uses a small set of open-source libraries solely to render UI and deliver alarms. None of these libraries send any data off your device:</p>
-      <ul>
-        <li><strong>react-native-tts</strong> — interfaces with the device's local TTS engine.</li>
-        <li><strong>react-native-linear-gradient</strong> — renders UI gradients.</li>
-        <li><strong>react-native-svg</strong> — renders vector graphics.</li>
-        <li><strong>@notifee/react-native</strong> — manages notification channel permissions only; does not track usage.</li>
-        <li><strong>@react-native-async-storage/async-storage</strong> — reads and writes local app data.</li>
-      </ul>
-      <p style="margin-top:12px;">There are no advertising, analytics, or crash-reporting SDKs included in the App.</p>
-    </section>
+  <!-- Privacy highlight -->
+  <div class="section">
+    <div class="privacy-strip">
+      <div class="ps-icon">🔐</div>
+      <div class="ps-body">
+        <h3>Your privacy is absolute</h3>
+        <p>Awekly collects zero data. No accounts, no analytics, no internet connection. Everything you type stays on your device and is deleted permanently when you uninstall the app.</p>
+        <a class="ps-link" href="privacy.html">Read the full Privacy Policy →</a>
+      </div>
+      <div class="ps-pills">
+        <div class="ps-pill"><span>✓</span> No internet access</div>
+        <div class="ps-pill"><span>✓</span> No account required</div>
+        <div class="ps-pill"><span>✓</span> No ads or tracking</div>
+        <div class="ps-pill"><span>✓</span> On-device TTS only</div>
+      </div>
+    </div>
+  </div>
 
-    <section>
-      <h2><span class="num">7</span> Children's Privacy</h2>
-      <p>Awekly does not collect any information from anyone, including children. The App is safe for users of all ages and fully complies with the Children's Online Privacy Protection Act (COPPA) and similar regulations worldwide.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">8</span> Data Security</h2>
-      <p>Because no data is transmitted off your device, there is no data in transit to protect and no server to secure. Your alarm data is protected by your device's own security mechanisms (lock screen, encryption, Android's app sandbox).</p>
-    </section>
-
-    <section>
-      <h2><span class="num">9</span> Changes to This Policy</h2>
-      <p>If we ever update this Privacy Policy, we will post the new version at this URL and update the "Last updated" date at the top. We encourage you to review this page periodically.</p>
-      <p>Because we collect no data, any future changes are unlikely to affect your privacy in a material way.</p>
-    </section>
-
-    <section>
-      <h2><span class="num">10</span> Contact Us</h2>
-      <p>If you have any questions or concerns about this Privacy Policy or the App's data practices, please contact us at:</p>
-      <p>
-        <a class="contact-link" href="mailto:gunaarun33@gmail.com">gunaarun33@gmail.com</a>
-      </p>
-    </section>
-
-  </main>
-
+  <!-- Footer -->
   <footer>
     <span class="footer-brand">A W E K L Y</span>
-    &copy; 2026 Awekly. All rights reserved.<br />
-    This privacy policy applies to the Awekly Android application.
+    <p>
+      An Android alarm app built for mindful waking.<br />
+      Contact: <a href="mailto:ssvignesh.619@gmail.com">ssvignesh.619@gmail.com</a><br />
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p style="margin-top:16px; font-size:12px; color: rgba(255,255,255,0.2);">© 2026 Awekly. All rights reserved.</p>
   </footer>
 
 </body>
